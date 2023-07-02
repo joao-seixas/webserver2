@@ -14,9 +14,11 @@ String leds = "000"; // string utilizada para guardar os estados dos leds (0 apa
 // função para aplicar os estados dos leds nas portas correspondentes
 // TODO - melhorar a lógica para remover as condicionais (converter o char para int)
 void changeLedStatus() {
-  leds.charAt(0) == '0' ? digitalWrite(14, LOW) : digitalWrite(14, HIGH); 
-  leds.charAt(1) == '0' ? digitalWrite(15, LOW) : digitalWrite(15, HIGH); 
-  leds.charAt(2) == '0' ? digitalWrite(4, LOW) : digitalWrite(4, HIGH); 
+  leds.charAt(0) == '0' ? digitalWrite(D0, LOW) : digitalWrite(D0, HIGH); 
+  leds.charAt(1) == '0' ? digitalWrite(D1, LOW) : digitalWrite(D1, HIGH); 
+  leds.charAt(2) == '0' ? digitalWrite(D2, LOW) : digitalWrite(D2, HIGH); 
+  leds.charAt(3) == '0' ? digitalWrite(D3, LOW) : digitalWrite(D3, HIGH); 
+  leds.charAt(4) == '0' ? digitalWrite(D5, LOW) : digitalWrite(D5, HIGH); 
 }
 
 // função que trata os eventos do WebSocketServer
@@ -94,9 +96,11 @@ void setup(){
 // pinagem das portas dos leds
 // os números NÃO correspondem aos gravados na placa!!!
 // TODO - listar todas as portas em constantes
-  pinMode(14, OUTPUT);
-  pinMode(15, OUTPUT);
-  pinMode(4, OUTPUT);
+  pinMode(D0, OUTPUT);
+  pinMode(D1, OUTPUT);
+  pinMode(D2, OUTPUT);
+  pinMode(D3, OUTPUT);
+  pinMode(D5, OUTPUT);
 
   Serial.begin(115200); // habilita a saída de depuração
   Serial.setDebugOutput(true); // habilita as saídas de depuração da biblioteca wi-fi (o padrão é true e ela seta para false)

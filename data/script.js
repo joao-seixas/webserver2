@@ -40,7 +40,7 @@ function onPageLoad() {
 
 function socketError(error) {
     connectionStatus.textContent = `Falha na conexão: ${error}`;
-    connectionStatus.style.color = 'red';
+    connectionStatus.stylecolor = 'red';
 }
 
 function socketClose() {
