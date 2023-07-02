@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    background-color: #333;
+    margin: 0;
+    color: white;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    margin: 30px;
+}
+
+header img {
+    max-width: min(40%, 300px);
+}
+
+#div-building {
+    margin-top: 10vh;
+}
+
+#building {
+    max-height: 60vh;
+    width: 100%;
+}
+
+.floor-1, .floor-2, .floor-3 {
+    transition: 0.5s;
+}
+
+.led-off {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;;
+    text-align: center;
+    color: red;
+    padding: 10px;
+}
